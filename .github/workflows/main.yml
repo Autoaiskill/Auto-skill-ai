@@ -1,0 +1,149 @@
+name: AutoSkill AI
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  autoskill:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          prompt: |
+            You are AutoSkill AI.
+
+            Role:
+            Autonomous AI Skill Creator.
+
+            Objectives:
+            - Create production-ready code.
+            - Design reusable AI skills.
+            - Generate APIs, plugins, workflows, and documentation.
+            - Improve architecture without breaking existing functionality.
+            - Preserve backward compatibility.
+            - Add input validation, logging, testing, and rollback support.
+            - Never generate placeholder code.
+            - Optimize for performance, security, and maintainability.
+            - Update documentation when code changes.
+            - Keep the project modular and scalable.
+
+            Output:
+            - Clean code
+            - Updated documentation
+            - Tests
+            - Build-ready changes
+
+          claude_args: "--max-turns 5"Here's a refined product definition you can use directly in your documentation or project:
+
+# AutoSkill AI
+
+## Tagline
+Create. Learn. Evolve. Automate.
+
+## Vision
+AutoSkill AI is an autonomous AI Skill Engineering Platform that creates, tests, improves, versions, and manages reusable AI skills, agents, plugins, APIs, workflows, and developer tools for modern AI ecosystems.
+
+## Mission
+Enable developers and organizations to rapidly build production-ready AI capabilities through automation, reusable components, and continuous improvement.
+
+## Core Modules
+
+### Skill Engine
+- Skill Creator
+- Skill Editor
+- Skill Validator
+- Skill Optimizer
+- Skill Versioning
+- Skill Marketplace
+
+### Agent Engine
+- Agent Creator
+- Multi-Agent Orchestrator
+- Agent Memory
+- Agent Communication
+- Agent Lifecycle Manager
+
+### Development Engine
+- Code Generator
+- API Generator
+- SDK Generator
+- Plugin Generator
+- CLI Generator
+- Documentation Generator
+
+### Automation Engine
+- Workflow Builder
+- Event Engine
+- Scheduler
+- Task Queue
+- Webhooks
+- Integrations
+
+### Knowledge Engine
+- Memory Manager
+- Knowledge Base
+- Retrieval Engine
+- Semantic Search
+- Context Manager
+
+### Quality Engine
+- Unit Testing
+- Integration Testing
+- Static Analysis
+- Performance Profiling
+- Security Scanning
+- Dependency Auditing
+
+### Deployment Engine
+- Build System
+- CI/CD Pipelines
+- Container Support
+- Cloud Deployment
+- Rollback Manager
+- Release Management
+
+### Analytics Engine
+- Usage Analytics
+- Error Monitoring
+- Performance Metrics
+- Cost Tracking
+- Audit Logs
+- Operational Dashboard
+
+## Outputs
+- AI Skills
+- AI Agents
+- Plugins
+- APIs
+- SDKs
+- CLI Tools
+- Full-Stack Applications
+- Automation Workflows
+- Documentation
+- Deployment Packages
+
+## Design Principles
+- Modular
+- Secure by Default
+- API-First
+- Extensible
+- Versioned
+- Observable
+- Production-Ready
+- Scalable
+- Testable
+- Maintainable
+
+## Goal
+Become a comprehensive platform for engineering, managing, and evolving AI capabilities that can be integrated into diverse software systems and business workflows.
+
+This positions AutoSkill AI as a complete AI skill engineering platform suitable for integration into your broader AI ecosystem.
